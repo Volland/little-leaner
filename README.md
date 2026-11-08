@@ -4,9 +4,10 @@ Code for *The Little Leaner: Dependent Types and Proofs in Lean 4, One Question 
 by Volodymyr Pavlyshyn.
 
 **The book:** [site](https://volland.github.io/little-leaner/) ·
-[free PDF](https://github.com/Volland/little-leaner/releases/latest/download/little-leaner.pdf) ·
-[free EPUB](https://github.com/Volland/little-leaner/releases/latest/download/little-leaner.epub) ·
-[Leanpub](https://leanpub.com/littleleaner) Every program in the book is cut from this repository, and every
+[buy it on Leanpub](https://leanpub.com/littleleaner). This repository holds the code
+only; the book is not in it.
+
+Every program in the book is cut from this repository, and every
 output, error, and goal printed in the book is a golden file here that the test checks.
 
 | Path | What |
@@ -32,4 +33,5 @@ goals and leaves the lines out.
 
 Core Lean only: no Mathlib, nothing else to download.
 
-Code: Apache-2.0. The book: CC BY 4.0.
+Code: Apache-2.0. The book is © Volodymyr Pavlyshyn and is sold on
+[Leanpub](https://leanpub.com/littleleaner).
