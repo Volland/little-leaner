@@ -1,7 +1,12 @@
 # The Little Leaner — companion code
 
 Code for *The Little Leaner: Dependent Types and Proofs in Lean 4, One Question at a Time*
-by Volodymyr Pavlyshyn. Every program in the book is cut from this repository, and every
+by Volodymyr Pavlyshyn.
+
+**The book:** [site](https://volland.github.io/little-leaner/) ·
+[free PDF](https://github.com/Volland/little-leaner/releases/latest/download/little-leaner.pdf) ·
+[free EPUB](https://github.com/Volland/little-leaner/releases/latest/download/little-leaner.epub) ·
+[Leanpub](https://leanpub.com/littleleaner) Every program in the book is cut from this repository, and every
 output, error, and goal printed in the book is a golden file here that the test checks.
 
 | Path | What |
