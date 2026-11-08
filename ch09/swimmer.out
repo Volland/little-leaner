@@ -14,3 +14,7 @@ Critter.frog
 -- ANCHOR: team
 [Critter.frog, Critter.otter]
 -- ANCHOR_END: team
+-- ANCHOR: sorts
+∃ c, Swims c : Prop
+Swimmer : Type
+-- ANCHOR_END: sorts

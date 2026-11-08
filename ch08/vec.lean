@@ -7,6 +7,11 @@ open Critter
 #eval ([] : List Critter).head?
 -- ANCHOR_END: listHead
 
+-- ANCHOR: listHeadProof
+#check @List.head
+#eval [heron, frog].head (by decide)
+-- ANCHOR_END: listHeadProof
+
 -- ANCHOR: vec
 inductive Vec (α : Type) : Nat → Type where
   | nil  : Vec α 0

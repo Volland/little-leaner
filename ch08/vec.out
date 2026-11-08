@@ -2,6 +2,10 @@
 some (Critter.heron)
 none
 -- ANCHOR_END: listHead
+-- ANCHOR: listHeadProof
+@List.head : {α : Type u_1} → (as : List α) → as ≠ [] → α
+Critter.heron
+-- ANCHOR_END: listHeadProof
 -- ANCHOR: checkVec
 Vec (α : Type) : Nat → Type
 -- ANCHOR_END: checkVec

@@ -42,3 +42,21 @@ def team : List Swimmer :=
 
 #eval team.map dive
 -- ANCHOR_END: team
+
+-- ANCHOR: sorts
+#check (∃ c, Swims c)
+#check Swimmer
+-- ANCHOR_END: sorts
+
+-- ANCHOR: forget
+theorem someone (s : Swimmer) :
+    ∃ c, Swims c :=
+  ⟨s.val, s.property⟩
+-- ANCHOR_END: forget
+
+-- ANCHOR: inside
+example (h : ∃ c, Swims c) :
+    ∃ c, Swims c ∨ Flies c := by
+  obtain ⟨c, hs⟩ := h
+  exact ⟨c, Or.inl hs⟩
+-- ANCHOR_END: inside

@@ -13,3 +13,10 @@ but is expected to have type
 in the application
   dive frog
 -- ANCHOR_END: bare
+-- ANCHOR: pick
+error: Tactic `cases` failed with a nested error:
+Tactic `induction` failed: recursor `Exists.casesOn` can only eliminate into `Prop`
+
+h : ∃ c, Swims c
+⊢ Critter
+-- ANCHOR_END: pick

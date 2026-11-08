@@ -15,3 +15,10 @@ def dive (s : Swimmer) : Critter :=
 -- ANCHOR: bare
 #eval dive frog
 -- ANCHOR_END: bare
+
+-- ANCHOR: pick
+def pick (h : ∃ c, Swims c) :
+    Critter := by
+  obtain ⟨c, _⟩ := h
+  exact c
+-- ANCHOR_END: pick
