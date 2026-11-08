@@ -1,0 +1,37 @@
+-- ANCHOR: za_before
+case succ
+n : Nat
+ih : 0 + n = n
+⊢ 0 + (n + 1) = n + 1
+-- ANCHOR_END: za_before
+-- ANCHOR: za_show
+case succ
+n : Nat
+ih : 0 + n = n
+⊢ 0 + n + 1 = n + 1
+-- ANCHOR_END: za_show
+-- ANCHOR: zero_before
+case zero
+n : Nat
+⊢ n + 0 = 0 + n
+-- ANCHOR_END: zero_before
+-- ANCHOR: zero_after
+case zero
+n : Nat
+⊢ n + 0 = n
+-- ANCHOR_END: zero_after
+-- ANCHOR: succ_before
+case succ
+n m : Nat
+ih : n + m = m + n
+⊢ n + (m + 1) = m + 1 + n
+-- ANCHOR_END: succ_before
+-- ANCHOR: succ_after
+case succ
+n m : Nat
+ih : n + m = m + n
+⊢ n + (m + 1) = m + n + 1
+-- ANCHOR_END: succ_after
+-- ANCHOR: lean_comm
+Nat.add_comm (n m : Nat) : n + m = m + n
+-- ANCHOR_END: lean_comm

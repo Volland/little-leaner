@@ -1,0 +1,12 @@
+-- ANCHOR: down_goal
+⊢ Path [frog, fly, algae]
+-- ANCHOR_END: down_goal
+-- ANCHOR: up_eval
+[Critter.frog, Critter.heron]
+-- ANCHOR_END: up_eval
+-- ANCHOR: up_goal
+case link
+e : Eats frog heron
+p : Path [heron]
+⊢ False
+-- ANCHOR_END: up_goal

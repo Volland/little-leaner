@@ -1,0 +1,18 @@
+-- ANCHOR: exact
+error: Type mismatch
+  Eats.frog_fly
+has type
+  Eats frog fly
+but is expected to have type
+  Eats c fly
+-- ANCHOR_END: exact
+-- ANCHOR: wrong_way
+error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  frog
+in the target expression
+  Eats c fly
+
+c : Critter
+h : frog = c
+⊢ Eats c fly
+-- ANCHOR_END: wrong_way

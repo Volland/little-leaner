@@ -1,0 +1,15 @@
+-- ANCHOR: ex1
+⊢ Chain 1 fish snail
+-- ANCHOR_END: ex1
+-- ANCHOR: ex2
+case succ
+n : N
+ih : mul zero n = zero
+⊢ mul zero (succ n) = zero
+-- ANCHOR_END: ex2
+-- ANCHOR: ex3
+case succ
+a b c : N
+ih : add (add a b) c = add a (add b c)
+⊢ add (add a b) (succ c) = add a (add b (succ c))
+-- ANCHOR_END: ex3

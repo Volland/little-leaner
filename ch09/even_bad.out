@@ -1,0 +1,26 @@
+-- ANCHOR: three
+error: Tactic `apply` failed: could not unify the conclusion of `@Even.add_two`
+  Even (?n + 2)
+with the goal
+  Even 1
+
+Note: The full type of `@Even.add_two` is
+  ∀ {n : Nat}, Even n → Even (n + 2)
+
+⊢ Even 1
+-- ANCHOR_END: three
+-- ANCHOR: three1
+⊢ Even 1
+-- ANCHOR_END: three1
+-- ANCHOR: decide
+error: failed to synthesize
+  Decidable (Even 4)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+-- ANCHOR_END: decide
+-- ANCHOR: eats
+error: failed to synthesize
+  Decidable (Eats frog fly)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+-- ANCHOR_END: eats

@@ -1,0 +1,17 @@
+-- ANCHOR: exfalso_1
+h : Eats fly frog
+⊢ False
+-- ANCHOR_END: exfalso_1
+-- ANCHOR: apply_not_1
+n : ¬Eats frog fly
+⊢ Eats frog fly
+-- ANCHOR_END: apply_not_1
+-- ANCHOR: snail_1
+case inl
+h✝ : Swims snail
+⊢ False
+
+case inr
+h✝ : Flies snail
+⊢ False
+-- ANCHOR_END: snail_1

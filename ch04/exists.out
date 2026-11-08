@@ -1,0 +1,23 @@
+-- ANCHOR: check
+∃ c, Eats c fish : Prop
+-- ANCHOR_END: check
+-- ANCHOR: fish_eaten_1
+⊢ Eats heron fish
+-- ANCHOR_END: fish_eaten_1
+-- ANCHOR: print
+theorem fish_eaten : ∃ c, Eats c fish :=
+Exists.intro heron Eats.heron_fish
+-- ANCHOR_END: print
+-- ANCHOR: duck_1
+⊢ Swims duck ∧ Flies duck
+-- ANCHOR_END: duck_1
+-- ANCHOR: use_1
+c : Critter
+e : Eats c snail
+⊢ ∃ c, Above c algae
+-- ANCHOR_END: use_1
+-- ANCHOR: use_2
+c : Critter
+e : Eats c snail
+⊢ Above c algae
+-- ANCHOR_END: use_2

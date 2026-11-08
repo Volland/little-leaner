@@ -1,0 +1,15 @@
+-- ANCHOR: ex1
+Critter.frog
+-- ANCHOR_END: ex1
+-- ANCHOR: ex2
+[Critter.heron, Critter.frog, Critter.fly, Critter.algae]
+-- ANCHOR_END: ex2
+-- ANCHOR: ex3
+case succ
+α β : Type
+f : α → β
+x : α
+n : Nat
+ih : map f (replicate n x) = replicate n (f x)
+⊢ map f (replicate (n + 1) x) = replicate (n + 1) (f x)
+-- ANCHOR_END: ex3

@@ -1,0 +1,22 @@
+-- ANCHOR: two
+eats frog fly : Bool
+Eats frog fly : Prop
+-- ANCHOR_END: two
+-- ANCHOR: Eats
+Eats : Critter → Critter → Prop
+-- ANCHOR_END: Eats
+-- ANCHOR: liar
+Eats fly frog : Prop
+-- ANCHOR_END: liar
+-- ANCHOR: prop
+Prop : Type
+-- ANCHOR_END: prop
+-- ANCHOR: proof
+Eats.frog_fly : Eats frog fly
+-- ANCHOR_END: proof
+-- ANCHOR: family
+Eats frog : Critter → Prop
+-- ANCHOR_END: family
+-- ANCHOR: promise
+eats frog fly = true : Prop
+-- ANCHOR_END: promise

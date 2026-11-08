@@ -1,0 +1,20 @@
+-- ANCHOR: plus
+error: Application type mismatch: The argument
+  Expr.tt
+has type
+  Expr Ty.bool
+but is expected to have type
+  Expr Ty.nat
+in the application
+  Expr.tt.plus
+-- ANCHOR_END: plus
+-- ANCHOR: ite
+error: Application type mismatch: The argument
+  Expr.ff
+has type
+  Expr Ty.bool
+but is expected to have type
+  Expr Ty.nat
+in the application
+  Expr.tt.ite (Expr.lit 1) Expr.ff
+-- ANCHOR_END: ite

@@ -1,0 +1,6 @@
+-- ANCHOR: ex3
+6
+-- ANCHOR_END: ex3
+-- ANCHOR: ex4
+[Critter.frog, Critter.fish, Critter.duck, Critter.otter]
+-- ANCHOR_END: ex4

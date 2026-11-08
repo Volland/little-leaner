@@ -1,0 +1,8 @@
+-- ANCHOR: short
+error: Type mismatch
+  Chain.step Eats.fly_algae
+has type
+  Chain 1 fly algae
+but is expected to have type
+  Chain 0 fly algae
+-- ANCHOR_END: short

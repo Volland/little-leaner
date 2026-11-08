@@ -1,0 +1,15 @@
+-- ANCHOR: prop
+frog = frog : Prop
+-- ANCHOR_END: prop
+-- ANCHOR: print
+inductive Eq.{u_1} : {α : Sort u_1} → α → α → Prop
+number of parameters: 2
+constructors:
+Eq.refl : ∀ {α : Sort u_1} (a : α), a = a
+-- ANCHOR_END: print
+-- ANCHOR: refl
+Eq.refl frog : frog = frog
+-- ANCHOR_END: refl
+-- ANCHOR: rfl
+@rfl : ∀ {α : Sort u_1} {a : α}, a = a
+-- ANCHOR_END: rfl

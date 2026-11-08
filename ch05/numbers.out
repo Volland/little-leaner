@@ -1,0 +1,19 @@
+-- ANCHOR: two
+zero.succ.succ : N
+-- ANCHOR_END: two
+-- ANCHOR: plain
+succ (succ zero) : N
+-- ANCHOR_END: plain
+-- ANCHOR: types
+N.zero : N
+N.succ (n : N) : N
+-- ANCHOR_END: types
+-- ANCHOR: eval
+N.succ (N.succ (N.zero))
+-- ANCHOR_END: eval
+-- ANCHOR: sum
+N.succ (N.succ (N.succ (N.zero)))
+-- ANCHOR_END: sum
+-- ANCHOR: sumcheck
+add one two : N
+-- ANCHOR_END: sumcheck

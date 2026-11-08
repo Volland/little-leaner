@@ -1,0 +1,10 @@
+-- ANCHOR: calc_bad
+error: Tactic `rfl` failed: The left-hand side
+  b + 1
+is not definitionally equal to the right-hand side
+  b + 2
+
+a b : Nat
+h : a = b + 1
+⊢ b + 1 = b + 2
+-- ANCHOR_END: calc_bad

@@ -1,0 +1,16 @@
+-- ANCHOR: type
+{ c // Swims c } : Type
+-- ANCHOR_END: type
+-- ANCHOR: parts
+ducky.val : Critter
+ducky.property : Swims ducky.val
+-- ANCHOR_END: parts
+-- ANCHOR: show
+Critter.duck
+-- ANCHOR_END: show
+-- ANCHOR: dive
+Critter.frog
+-- ANCHOR_END: dive
+-- ANCHOR: team
+[Critter.frog, Critter.otter]
+-- ANCHOR_END: team

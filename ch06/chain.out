@@ -1,0 +1,23 @@
+-- ANCHOR: symm_before
+a b : Nat
+h : a = b
+⊢ b = a
+-- ANCHOR_END: symm_before
+-- ANCHOR: symm_after
+a b : Nat
+h : a = b
+⊢ a = b
+-- ANCHOR_END: symm_after
+-- ANCHOR: symm_check
+@Eq.symm : ∀ {α : Sort u_1} {a b : α}, a = b → b = a
+-- ANCHOR_END: symm_check
+-- ANCHOR: trans_check
+@Eq.trans : ∀ {α : Sort u_1} {a b c : α}, a = b → b = c → a = c
+-- ANCHOR_END: trans_check
+-- ANCHOR: congr_check
+@congrArg : ∀ {α : Sort u_1} {β : Sort u_2} {a₁ a₂ : α} (f : α → β), a₁ = a₂ → f a₁ = f a₂
+-- ANCHOR_END: congr_check
+-- ANCHOR: print_rw
+theorem c_fly : ∀ (c : Critter), c = frog → Eats c fly :=
+fun c h => Eq.mpr (id (congrArg (fun _a => Eats _a fly) h)) Eats.frog_fly
+-- ANCHOR_END: print_rw

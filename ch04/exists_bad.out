@@ -1,0 +1,11 @@
+-- ANCHOR: frog
+error: Type mismatch
+  Eats.heron_fish
+has type
+  Eats heron fish
+but is expected to have type
+  Eats frog fish
+-- ANCHOR_END: frog
+-- ANCHOR: frog_1
+⊢ Eats frog fish
+-- ANCHOR_END: frog_1

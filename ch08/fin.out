@@ -1,0 +1,22 @@
+-- ANCHOR: listGet
+none
+-- ANCHOR_END: listGet
+-- ANCHOR: checkFin
+Fin (n : Nat) : Type
+@Fin.mk : {n : Nat} → (val : Nat) → val < n → Fin n
+-- ANCHOR_END: checkFin
+-- ANCHOR: evalNth
+Critter.fly
+Critter.heron
+-- ANCHOR_END: evalNth
+-- ANCHOR: wrap
+2
+Critter.fly
+-- ANCHOR_END: wrap
+-- ANCHOR: evalMap
+map swims chain : Vec Bool 3
+[false, true, false]
+-- ANCHOR_END: evalMap
+-- ANCHOR: evalZip
+[(Critter.heron, false), (Critter.frog, true), (Critter.fly, false)]
+-- ANCHOR_END: evalZip

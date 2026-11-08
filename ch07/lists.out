@@ -1,0 +1,21 @@
+-- ANCHOR: chain
+[heron, frog, fly, algae] : List Critter
+-- ANCHOR_END: chain
+-- ANCHOR: cons
+[heron, frog, fly, algae] : List Critter
+-- ANCHOR_END: cons
+-- ANCHOR: nil
+[] : List Critter
+-- ANCHOR_END: nil
+-- ANCHOR: app_eval
+[Critter.heron, Critter.frog, Critter.fly, Critter.algae]
+-- ANCHOR_END: app_eval
+-- ANCHOR: len_eval
+4
+-- ANCHOR_END: len_eval
+-- ANCHOR: rev_eval
+[Critter.algae, Critter.fly, Critter.frog, Critter.heron]
+-- ANCHOR_END: rev_eval
+-- ANCHOR: map_eval
+[Critter.frog, Critter.fly, Critter.algae]
+-- ANCHOR_END: map_eval

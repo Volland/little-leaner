@@ -1,0 +1,46 @@
+-- ANCHOR: listHead
+some (Critter.heron)
+none
+-- ANCHOR_END: listHead
+-- ANCHOR: checkVec
+Vec (α : Type) : Nat → Type
+-- ANCHOR_END: checkVec
+-- ANCHOR: three
+Vec Critter 3 : Type
+-- ANCHOR_END: three
+-- ANCHOR: checkNil
+nil : Vec Critter 0
+-- ANCHOR_END: checkNil
+-- ANCHOR: checkCons
+@cons : {α : Type} → {n : Nat} → α → Vec α n → Vec α (n + 1)
+-- ANCHOR_END: checkCons
+-- ANCHOR: one
+cons fly nil : Vec Critter (0 + 1)
+-- ANCHOR_END: one
+-- ANCHOR: two
+pair : Vec Critter (0 + 1 + 1)
+-- ANCHOR_END: two
+-- ANCHOR: evalChain
+[Critter.heron, Critter.frog, Critter.fly]
+-- ANCHOR_END: evalChain
+-- ANCHOR: len
+3
+-- ANCHOR_END: len
+-- ANCHOR: evalHead
+Critter.heron
+-- ANCHOR_END: evalHead
+-- ANCHOR: tail
+tail chain : Vec Critter 2
+Critter.frog
+-- ANCHOR_END: tail
+-- ANCHOR: goalZero
+case nil
+⊢ nil = nil
+-- ANCHOR_END: goalZero
+-- ANCHOR: goalSucc
+case cons
+n : Nat
+x : Critter
+xs : Vec Critter n
+⊢ cons x xs = cons (head (cons x xs)) (tail (cons x xs))
+-- ANCHOR_END: goalSucc

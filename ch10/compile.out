@@ -1,0 +1,53 @@
+-- ANCHOR: snack
+5
+-- ANCHOR_END: snack
+-- ANCHOR: lit_goal
+case lit
+t : Ty
+n : Nat
+s : List Ty
+st : Stack s
+⊢ run (compile (Expr.lit n)) st = push (eval (Expr.lit n)) st
+-- ANCHOR_END: lit_goal
+-- ANCHOR: plus_goal
+case plus
+t : Ty
+a b : Expr Ty.nat
+iha : ∀ {s : List Ty} (st : Stack s), run (compile a) st = push (eval a) st
+ihb : ∀ {s : List Ty} (st : Stack s), run (compile b) st = push (eval b) st
+s : List Ty
+st : Stack s
+⊢ run (compile (a.plus b)) st = push (eval (a.plus b)) st
+-- ANCHOR_END: plus_goal
+-- ANCHOR: plus_join
+case plus
+t : Ty
+a b : Expr Ty.nat
+iha : ∀ {s : List Ty} (st : Stack s), run (compile a) st = push (eval a) st
+ihb : ∀ {s : List Ty} (st : Stack s), run (compile b) st = push (eval b) st
+s : List Ty
+st : Stack s
+⊢ run (one Instr.add) (run (compile b) (run (compile a) st)) = push (eval (a.plus b)) st
+-- ANCHOR_END: plus_join
+-- ANCHOR: plus_ih
+case plus
+t : Ty
+a b : Expr Ty.nat
+iha : ∀ {s : List Ty} (st : Stack s), run (compile a) st = push (eval a) st
+ihb : ∀ {s : List Ty} (st : Stack s), run (compile b) st = push (eval b) st
+s : List Ty
+st : Stack s
+⊢ run (one Instr.add) (push (eval b) (push (eval a) st)) = push (eval (a.plus b)) st
+-- ANCHOR_END: plus_ih
+-- ANCHOR: ite_goal
+case ite
+t t✝ : Ty
+c : Expr Ty.bool
+a b : Expr t✝
+ihc : ∀ {s : List Ty} (st : Stack s), run (compile c) st = push (eval c) st
+iha : ∀ {s : List Ty} (st : Stack s), run (compile a) st = push (eval a) st
+ihb : ∀ {s : List Ty} (st : Stack s), run (compile b) st = push (eval b) st
+s : List Ty
+st : Stack s
+⊢ run (one Instr.pick) (push (eval b) (push (eval a) (push (eval c) st))) = push (eval (c.ite a b)) st
+-- ANCHOR_END: ite_goal

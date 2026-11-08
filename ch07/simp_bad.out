@@ -1,0 +1,8 @@
+-- ANCHOR: no_helper
+error: unsolved goals
+case cons
+x : Critter
+xs : List Critter
+ih : rev (rev xs) = xs
+⊢ rev (app (rev xs) [x]) = x :: xs
+-- ANCHOR_END: no_helper

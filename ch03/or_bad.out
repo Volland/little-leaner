@@ -1,0 +1,5 @@
+-- ANCHOR: snail
+error: Tactic `constructor` failed: no applicable constructor found
+
+⊢ Swims snail
+-- ANCHOR_END: snail

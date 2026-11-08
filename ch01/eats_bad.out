@@ -1,0 +1,19 @@
+-- ANCHOR: string
+error: Application type mismatch: The argument
+  "fly"
+has type
+  String
+but is expected to have type
+  Critter
+in the application
+  eats frog "fly"
+-- ANCHOR_END: string
+-- ANCHOR: half
+error: could not synthesize a `Repr` or `ToString` instance for type
+  Critter → Bool
+-- ANCHOR_END: half
+-- ANCHOR: lie
+error: Tactic `decide` proved that the proposition
+  eats fly frog = true
+is false
+-- ANCHOR_END: lie

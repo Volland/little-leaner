@@ -1,0 +1,27 @@
+-- ANCHOR: check
+eats : Critter → Critter → Bool
+-- ANCHOR_END: check
+-- ANCHOR: yes
+true
+-- ANCHOR_END: yes
+-- ANCHOR: no
+false
+-- ANCHOR_END: no
+-- ANCHOR: partial
+eats frog : Critter → Bool
+-- ANCHOR_END: partial
+-- ANCHOR: menu
+[Critter.fly, Critter.snail]
+-- ANCHOR_END: menu
+-- ANCHOR: fun
+fun c => eats c fish : Critter → Bool
+-- ANCHOR_END: fun
+-- ANCHOR: eaters
+[Critter.heron, Critter.otter]
+-- ANCHOR_END: eaters
+-- ANCHOR: grazer
+[Critter.fly, Critter.snail, Critter.duck]
+-- ANCHOR_END: grazer
+-- ANCHOR: self
+[]
+-- ANCHOR_END: self

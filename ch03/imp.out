@@ -1,0 +1,20 @@
+-- ANCHOR: fe0
+c : Critter
+⊢ Eats c fly → Above c algae
+-- ANCHOR_END: fe0
+-- ANCHOR: fe1
+c : Critter
+h : Eats c fly
+⊢ Above c algae
+-- ANCHOR_END: fe1
+-- ANCHOR: fe2
+c : Critter
+h : Eats c fly
+⊢ Above fly algae
+-- ANCHOR_END: fe2
+-- ANCHOR: check
+flyEater (c : Critter) : Eats c fly → Above c algae
+-- ANCHOR_END: check
+-- ANCHOR: use
+flyEater frog Eats.frog_fly : Above frog algae
+-- ANCHOR_END: use

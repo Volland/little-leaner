@@ -1,0 +1,9 @@
+-- ANCHOR: check
+Chain 3 heron algae : Prop
+-- ANCHOR_END: check
+-- ANCHOR: h1
+⊢ Chain 2 frog algae
+-- ANCHOR_END: h1
+-- ANCHOR: h2
+⊢ Chain 1 fly algae
+-- ANCHOR_END: h2

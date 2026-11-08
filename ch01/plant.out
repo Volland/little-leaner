@@ -1,0 +1,10 @@
+-- ANCHOR: check
+isPlant : Critter → Bool
+-- ANCHOR_END: check
+-- ANCHOR: evals
+true
+false
+-- ANCHOR_END: evals
+-- ANCHOR: who
+[Critter.frog, Critter.fish, Critter.duck, Critter.otter]
+-- ANCHOR_END: who

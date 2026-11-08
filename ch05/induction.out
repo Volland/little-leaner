@@ -1,0 +1,25 @@
+-- ANCHOR: za_start
+n : N
+⊢ add zero n = n
+-- ANCHOR_END: za_start
+-- ANCHOR: za_zero
+case zero
+⊢ add zero zero = zero
+-- ANCHOR_END: za_zero
+-- ANCHOR: za_succ
+case succ
+n : N
+ih : add zero n = n
+⊢ add zero (succ n) = succ n
+-- ANCHOR_END: za_succ
+-- ANCHOR: sa_zero
+case zero
+m : N
+⊢ add (succ m) zero = succ (add m zero)
+-- ANCHOR_END: sa_zero
+-- ANCHOR: sa_succ
+case succ
+m n : N
+ih : add (succ m) n = succ (add m n)
+⊢ add (succ m) (succ n) = succ (add m (succ n))
+-- ANCHOR_END: sa_succ

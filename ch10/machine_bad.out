@@ -1,0 +1,20 @@
+-- ANCHOR: empty
+error: Application type mismatch: The argument
+  Instr.add
+has type
+  Instr (Ty.nat :: Ty.nat :: ?m.7) (Ty.nat :: ?m.7)
+but is expected to have type
+  Instr [] ?m.5
+in the application
+  Prog.cons Instr.add
+-- ANCHOR_END: empty
+-- ANCHOR: mixed
+error: Application type mismatch: The argument
+  true
+has type
+  Bool
+but is expected to have type
+  Ty.nat.denote
+in the application
+  Instr.push true
+-- ANCHOR_END: mixed

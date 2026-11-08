@@ -1,0 +1,18 @@
+-- ANCHOR: checks
+Expr.lit 2 : Expr Ty.nat
+Expr.tt : Expr Ty.bool
+-- ANCHOR_END: checks
+-- ANCHOR: checkplus
+Expr.plus : Expr Ty.nat → Expr Ty.nat → Expr Ty.nat
+-- ANCHOR_END: checkplus
+-- ANCHOR: checkite
+Expr.ite {t : Ty} : Expr Ty.bool → Expr t → Expr t → Expr t
+-- ANCHOR_END: checkite
+-- ANCHOR: checkeval
+eval {t : Ty} : Expr t → t.denote
+-- ANCHOR_END: checkeval
+-- ANCHOR: evals
+5
+true
+5
+-- ANCHOR_END: evals

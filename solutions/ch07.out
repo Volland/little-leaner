@@ -1,0 +1,15 @@
+-- ANCHOR: ex1
+case cons
+f : Critter → Critter
+x : Critter
+xs : List Critter
+ih : len (mapL f xs) = len xs
+⊢ len (mapL f (x :: xs)) = len (x :: xs)
+-- ANCHOR_END: ex1
+-- ANCHOR: ex3
+case cons
+x : Critter
+xs : List Critter
+ih : len (rev xs) = len xs
+⊢ len (rev xs) + len [x] = len (x :: xs)
+-- ANCHOR_END: ex3

@@ -1,0 +1,26 @@
+-- ANCHOR: four
+error: Tactic `rfl` failed: The left-hand side
+  2 + 2
+is not definitionally equal to the right-hand side
+  5
+
+⊢ 2 + 2 = 5
+-- ANCHOR_END: four
+-- ANCHOR: N_zero_add
+error: Tactic `rfl` failed: The left-hand side
+  add zero n
+is not definitionally equal to the right-hand side
+  n
+
+n : N
+⊢ add zero n = n
+-- ANCHOR_END: N_zero_add
+-- ANCHOR: nat_zero_add
+error: Tactic `rfl` failed: The left-hand side
+  0 + n
+is not definitionally equal to the right-hand side
+  n
+
+n : Nat
+⊢ 0 + n = n
+-- ANCHOR_END: nat_zero_add

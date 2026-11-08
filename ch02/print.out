@@ -1,0 +1,19 @@
+-- ANCHOR: print
+theorem frog_eats_fly : Eats frog fly :=
+Eats.frog_fly
+-- ANCHOR_END: print
+-- ANCHOR: print2
+theorem heron_eats_fish : Eats heron fish :=
+Eats.heron_fish
+-- ANCHOR_END: print2
+-- ANCHOR: true
+inductive True : Prop
+number of parameters: 0
+constructors:
+True.intro : True
+-- ANCHOR_END: true
+-- ANCHOR: false
+inductive False : Prop
+number of parameters: 0
+constructors:
+-- ANCHOR_END: false

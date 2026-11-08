@@ -1,0 +1,4 @@
+-- ANCHOR: main
+"frogs eat flies"
+Critter.frog
+-- ANCHOR_END: main

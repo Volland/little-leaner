@@ -1,0 +1,9 @@
+-- ANCHOR: evalApp
+[Critter.heron, Critter.frog, Critter.fly, Critter.snail, Critter.snail]
+-- ANCHOR_END: evalApp
+-- ANCHOR: checkApp
+five : Vec Critter (2 + 3)
+-- ANCHOR_END: checkApp
+-- ANCHOR: evalCast
+[Critter.heron, Critter.frog, Critter.fly, Critter.heron, Critter.frog, Critter.fly]
+-- ANCHOR_END: evalCast

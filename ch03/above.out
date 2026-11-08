@@ -1,0 +1,35 @@
+-- ANCHOR: checks
+Above.step {x y : Critter} : Eats x y → Above x y
+Above.trans {x y z : Critter} : Eats x y → Above y z → Above x z
+-- ANCHOR_END: checks
+-- ANCHOR: fly0
+⊢ Above fly algae
+-- ANCHOR_END: fly0
+-- ANCHOR: fly1
+⊢ Eats fly algae
+-- ANCHOR_END: fly1
+-- ANCHOR: heron1a
+case a
+⊢ Eats heron ?y
+
+case a
+⊢ Above ?y algae
+
+case y
+⊢ Critter
+-- ANCHOR_END: heron1a
+-- ANCHOR: heron1b
+case a
+⊢ Above frog algae
+-- ANCHOR_END: heron1b
+-- ANCHOR: heron1c
+case a.a
+⊢ Eats frog fly
+
+case a.a
+⊢ Above fly algae
+-- ANCHOR_END: heron1c
+-- ANCHOR: print
+theorem heron_above_algae : Above heron algae :=
+Above.trans Eats.heron_frog (Above.trans Eats.frog_fly fly_above_algae)
+-- ANCHOR_END: print

@@ -1,0 +1,11 @@
+-- ANCHOR: lie
+error: Tactic `decide` proved that the proposition
+  Eats fly frog
+is false
+-- ANCHOR_END: lie
+-- ANCHOR: heron
+error: failed to synthesize
+  Decidable (∃ c, Eats c heron)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+-- ANCHOR_END: heron

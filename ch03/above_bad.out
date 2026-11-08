@@ -1,0 +1,19 @@
+-- ANCHOR: step
+error: Tactic `constructor` failed: no applicable constructor found
+
+⊢ Eats heron algae
+-- ANCHOR_END: step
+-- ANCHOR: duck
+error: Tactic `constructor` failed: no applicable constructor found
+
+case a
+⊢ Eats heron duck
+-- ANCHOR_END: duck
+-- ANCHOR: eats
+error: Type mismatch
+  Eats.heron_frog
+has type
+  Eats heron frog
+but is expected to have type
+  Above heron frog
+-- ANCHOR_END: eats

@@ -1,0 +1,7 @@
+-- ANCHOR: ex1
+false
+false
+-- ANCHOR_END: ex1
+-- ANCHOR: ex3
+true
+-- ANCHOR_END: ex3

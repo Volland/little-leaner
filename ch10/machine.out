@@ -1,0 +1,6 @@
+-- ANCHOR: stackex
+Stack.push 5 (Stack.push true Stack.nil) : Stack [Ty.nat, Ty.bool]
+-- ANCHOR_END: stackex
+-- ANCHOR: five
+5
+-- ANCHOR_END: five

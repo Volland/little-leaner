@@ -1,0 +1,70 @@
+-- ANCHOR: app_nil_right
+error: Tactic `rfl` failed: The left-hand side
+  app xs []
+is not definitionally equal to the right-hand side
+  xs
+
+xs : List Critter
+⊢ app xs [] = xs
+-- ANCHOR_END: app_nil_right
+-- ANCHOR: on_ys
+error: Tactic `rfl` failed: The left-hand side
+  len (app xs [])
+is not definitionally equal to the right-hand side
+  len xs + len []
+
+case nil
+xs : List Critter
+⊢ len (app xs []) = len xs + len []
+
+error: Tactic `rfl` failed: The left-hand side
+  len (app xs (y :: ys))
+is not definitionally equal to the right-hand side
+  len xs + len (y :: ys)
+
+case cons
+xs : List Critter
+y : Critter
+ys : List Critter
+ih : len (app xs ys) = len xs + len ys
+⊢ len (app xs (y :: ys)) = len xs + len (y :: ys)
+-- ANCHOR_END: on_ys
+-- ANCHOR: on_ys_nil
+case nil
+xs : List Critter
+⊢ len (app xs []) = len xs + len []
+-- ANCHOR_END: on_ys_nil
+-- ANCHOR: on_ys_cons
+case cons
+xs : List Critter
+y : Critter
+ys : List Critter
+ih : len (app xs ys) = len xs + len ys
+⊢ len (app xs (y :: ys)) = len xs + len (y :: ys)
+-- ANCHOR_END: on_ys_cons
+-- ANCHOR: rr_stuck
+error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  rev (rev xs)
+in the target expression
+  rev (app (rev xs) [x]) = x :: xs
+
+case cons
+x : Critter
+xs : List Critter
+ih : rev (rev xs) = xs
+⊢ rev (app (rev xs) [x]) = x :: xs
+-- ANCHOR_END: rr_stuck
+-- ANCHOR: rr_start
+case cons
+x : Critter
+xs : List Critter
+ih : rev (rev xs) = xs
+⊢ rev (rev (x :: xs)) = x :: xs
+-- ANCHOR_END: rr_start
+-- ANCHOR: rr_unfold
+case cons
+x : Critter
+xs : List Critter
+ih : rev (rev xs) = xs
+⊢ rev (app (rev xs) [x]) = x :: xs
+-- ANCHOR_END: rr_unfold

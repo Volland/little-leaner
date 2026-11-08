@@ -1,0 +1,35 @@
+-- ANCHOR: and1
+case left
+⊢ Swims frog
+
+case right
+⊢ Eats frog fly
+-- ANCHOR_END: and1
+-- ANCHOR: andIntro
+And.intro {a b : Prop} (left : a) (right : b) : a ∧ b
+-- ANCHOR_END: andIntro
+-- ANCHOR: obtain1
+c : Critter
+hs : Swims c
+hf : Eats c fly
+⊢ Above c algae
+-- ANCHOR_END: obtain1
+-- ANCHOR: left1
+⊢ Swims duck
+-- ANCHOR_END: left1
+-- ANCHOR: orIntro
+Or.inl {a b : Prop} (h : a) : a ∨ b
+Or.inr {a b : Prop} (h : b) : a ∨ b
+-- ANCHOR_END: orIntro
+-- ANCHOR: cases1
+case inl
+c : Critter
+hf : Eats c fly
+⊢ Above c algae
+-- ANCHOR_END: cases1
+-- ANCHOR: cases2
+case inr
+c : Critter
+hs : Eats c snail
+⊢ Above c algae
+-- ANCHOR_END: cases2

@@ -1,0 +1,19 @@
+-- ANCHOR: false
+inductive False : Prop
+number of parameters: 0
+constructors:
+-- ANCHOR_END: false
+-- ANCHOR: not
+@[implicit_reducible] def Not : Prop → Prop :=
+fun a => a → False
+-- ANCHOR_END: not
+-- ANCHOR: check
+¬Eats fly frog : Prop
+-- ANCHOR_END: check
+-- ANCHOR: fly_frog_0
+⊢ ¬Eats fly frog
+-- ANCHOR_END: fly_frog_0
+-- ANCHOR: fly_frog_1
+h : Eats fly frog
+⊢ False
+-- ANCHOR_END: fly_frog_1

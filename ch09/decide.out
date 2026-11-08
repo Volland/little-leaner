@@ -1,0 +1,13 @@
+-- ANCHOR: yes
+isTrue Even.zero : Decidable (Even 0)
+-- ANCHOR_END: yes
+-- ANCHOR: no
+isFalse ⋯ : Decidable (Even 1)
+-- ANCHOR_END: no
+-- ANCHOR: bool
+decide (Even 7) : Bool
+false
+-- ANCHOR_END: bool
+-- ANCHOR: filter
+[0, 2, 4, 6, 8, 10]
+-- ANCHOR_END: filter

@@ -1,0 +1,11 @@
+-- ANCHOR: seven
+error: Tactic `decide` proved that the proposition
+  Even 7
+is false
+-- ANCHOR_END: seven
+-- ANCHOR: forall
+error: failed to synthesize
+  Decidable (∀ (n : Nat), Even (n + n))
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+-- ANCHOR_END: forall

@@ -1,0 +1,17 @@
+-- ANCHOR: print
+inductive Nat : Type
+number of parameters: 0
+constructors:
+Nat.zero : Nat
+Nat.succ : Nat → Nat
+-- ANCHOR_END: print
+-- ANCHOR: three
+3
+-- ANCHOR_END: three
+-- ANCHOR: big
+5
+1111111110
+-- ANCHOR_END: big
+-- ANCHOR: five_goal
+⊢ 2 + 3 = 5
+-- ANCHOR_END: five_goal

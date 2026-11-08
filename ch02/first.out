@@ -1,0 +1,9 @@
+-- ANCHOR: before
+⊢ Eats frog fly
+-- ANCHOR_END: before
+-- ANCHOR: check
+frog_eats_fly : Eats frog fly
+-- ANCHOR_END: check
+-- ANCHOR: ctor_before
+⊢ Eats heron fish
+-- ANCHOR_END: ctor_before

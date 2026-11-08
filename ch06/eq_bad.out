@@ -1,0 +1,26 @@
+-- ANCHOR: frog_fly
+error: Tactic `rfl` failed: The left-hand side
+  frog
+is not definitionally equal to the right-hand side
+  fly
+
+⊢ frog = fly
+-- ANCHOR_END: frog_fly
+-- ANCHOR: zero_add
+error: Tactic `rfl` failed: The left-hand side
+  0 + n
+is not definitionally equal to the right-hand side
+  n
+
+n : Nat
+⊢ 0 + n = n
+-- ANCHOR_END: zero_add
+-- ANCHOR: comm
+error: Tactic `rfl` failed: The left-hand side
+  a + b
+is not definitionally equal to the right-hand side
+  b + a
+
+a b : Nat
+⊢ a + b = b + a
+-- ANCHOR_END: comm

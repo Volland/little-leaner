@@ -1,0 +1,15 @@
+-- ANCHOR: heron
+error: Tactic `constructor` failed: no applicable constructor found
+
+⊢ Swims heron
+-- ANCHOR_END: heron
+-- ANCHOR: bare
+error: Application type mismatch: The argument
+  frog
+has type
+  Critter
+but is expected to have type
+  Swimmer
+in the application
+  dive frog
+-- ANCHOR_END: bare

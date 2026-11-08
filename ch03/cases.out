@@ -1,0 +1,29 @@
+-- ANCHOR: snail1
+case frog_snail
+⊢ Swims frog
+
+case fish_snail
+⊢ Swims fish
+
+case duck_snail
+⊢ Swims duck
+-- ANCHOR_END: snail1
+-- ANCHOR: above1
+case step
+x : Critter
+e : Eats fly x
+⊢ Above frog x
+-- ANCHOR_END: above1
+-- ANCHOR: above2
+case trans
+x y✝ : Critter
+e : Eats fly y✝
+r : Above y✝ x
+⊢ Above frog x
+-- ANCHOR_END: above2
+-- ANCHOR: above3
+case trans.fly_algae
+x : Critter
+r : Above algae x
+⊢ Above frog x
+-- ANCHOR_END: above3

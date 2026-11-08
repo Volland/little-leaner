@@ -1,0 +1,15 @@
+-- ANCHOR: on_m
+error: Tactic `rfl` failed: The left-hand side
+  add (succ zero) n
+is not definitionally equal to the right-hand side
+  succ (add zero n)
+
+case zero
+n : N
+⊢ add (succ zero) n = succ (add zero n)
+-- ANCHOR_END: on_m
+-- ANCHOR: m_zero
+case zero
+n : N
+⊢ add (succ zero) n = succ (add zero n)
+-- ANCHOR_END: m_zero

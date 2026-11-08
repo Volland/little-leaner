@@ -1,0 +1,6 @@
+-- ANCHOR: show_bad
+error: 'show' tactic failed, pattern
+  1 + n = n + 1
+is not definitionally equal to target
+  0 + (n + 1) = n + 1
+-- ANCHOR_END: show_bad

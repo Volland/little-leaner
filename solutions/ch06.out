@@ -1,0 +1,12 @@
+-- ANCHOR: ex1
+a b c : Nat
+h1 : a = b
+h2 : c = b
+⊢ b + 1 = c + 1
+-- ANCHOR_END: ex1
+-- ANCHOR: ex3
+case succ
+n m k : Nat
+ih : n + m + k = n + (m + k)
+⊢ n + m + (k + 1) = n + (m + (k + 1))
+-- ANCHOR_END: ex3

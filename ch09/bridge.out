@@ -1,0 +1,30 @@
+-- ANCHOR: iff
+Iff (a b : Prop) : Prop
+@Iff.intro : ∀ {a b : Prop}, (a → b) → (b → a) → (a ↔ b)
+-- ANCHOR_END: iff
+-- ANCHOR: down_yes1
+h : eats frog fly = true
+⊢ Eats frog fly
+-- ANCHOR_END: down_yes1
+-- ANCHOR: down_no1
+h : eats fly frog = true
+⊢ Eats fly frog
+-- ANCHOR_END: down_no1
+-- ANCHOR: eats_iff1
+case mp
+c d : Critter
+⊢ eats c d = true → Eats c d
+
+case mpr
+c d : Critter
+⊢ Eats c d → eats c d = true
+-- ANCHOR_END: eats_iff1
+-- ANCHOR: use
+eats_iff.mpr Eats.frog_fly : eats frog fly = true
+-- ANCHOR_END: use
+-- ANCHOR: of_iff
+@decidable_of_iff : {b : Prop} → (a : Prop) → (a ↔ b) → [Decidable a] → Decidable b
+-- ANCHOR_END: of_iff
+-- ANCHOR: filter
+[Critter.heron, Critter.otter]
+-- ANCHOR_END: filter

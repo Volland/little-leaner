@@ -1,0 +1,13 @@
+-- ANCHOR: simp_stuck
+error: `simp` made no progress
+-- ANCHOR_END: simp_stuck
+-- ANCHOR: times
+error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  b ≥ 0
+  a ≥ 0
+  a - b ≥ 1
+where
+ a := ↑n * ↑m
+ b := ↑m * ↑n
+-- ANCHOR_END: times

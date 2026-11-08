@@ -1,0 +1,16 @@
+-- ANCHOR: ex1
+⊢ Eats otter fish
+⊢ Eats otter fish
+-- ANCHOR_END: ex1
+-- ANCHOR: ex2
+theorem heron_flies : Flies heron :=
+Flies.heron
+-- ANCHOR_END: ex2
+-- ANCHOR: ex3
+inductive Grazes : Critter → Prop
+number of parameters: 0
+constructors:
+Grazes.fly : Grazes fly
+Grazes.snail : Grazes snail
+Grazes.duck : Grazes duck
+-- ANCHOR_END: ex3

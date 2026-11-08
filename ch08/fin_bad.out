@@ -1,0 +1,15 @@
+-- ANCHOR: five
+error: Tactic `decide` proved that the proposition
+  5 < 3
+is false
+-- ANCHOR_END: five
+-- ANCHOR: zipBad
+error: Application type mismatch: The argument
+  replicate 2 snail
+has type
+  Vec Critter 2
+but is expected to have type
+  Vec ?m.3 3
+in the application
+  zip chain (replicate 2 snail)
+-- ANCHOR_END: zipBad

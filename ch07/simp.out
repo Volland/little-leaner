@@ -1,0 +1,12 @@
+-- ANCHOR: len_app_simp
+case cons
+ys : List Critter
+x : Critter
+xs : List Critter
+ih : len (app xs ys) = len xs + len ys
+⊢ len xs + len ys + 1 = len xs + 1 + len ys
+-- ANCHOR_END: len_app_simp
+-- ANCHOR: why
+Try this:
+  [apply] simp only [rev_app, rev_rev]
+-- ANCHOR_END: why

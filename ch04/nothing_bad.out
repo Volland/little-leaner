@@ -1,0 +1,17 @@
+-- ANCHOR: frog_fly
+error: unsolved goals
+case frog_fly
+⊢ False
+-- ANCHOR_END: frog_fly
+-- ANCHOR: nofun
+error: Missing cases:
+Eats.frog_fly
+-- ANCHOR_END: nofun
+-- ANCHOR: fish
+error: unsolved goals
+case heron_fish
+⊢ False
+
+case otter_fish
+⊢ False
+-- ANCHOR_END: fish

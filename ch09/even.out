@@ -1,0 +1,22 @@
+-- ANCHOR: check
+Even : Nat → Prop
+Even 4 : Prop
+-- ANCHOR_END: check
+-- ANCHOR: addtwo
+Even.add_two {n : Nat} : Even n → Even (n + 2)
+-- ANCHOR_END: addtwo
+-- ANCHOR: four1
+⊢ Even 2
+-- ANCHOR_END: four1
+-- ANCHOR: four2
+⊢ Even 0
+-- ANCHOR_END: four2
+-- ANCHOR: three1
+h : Even 3
+⊢ False
+-- ANCHOR_END: three1
+-- ANCHOR: three2
+case add_two
+h1 : Even (0 + 1)
+⊢ False
+-- ANCHOR_END: three2

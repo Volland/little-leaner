@@ -1,0 +1,19 @@
+-- ANCHOR: decide_vars
+error: Expected type must not contain free variables
+  a + b = b + a
+
+Hint: Use the `+revert` option to automatically clean up and revert free variables
+-- ANCHOR_END: decide_vars
+-- ANCHOR: omega_mul
+error: omega could not prove the goal:
+a possible counterexample may satisfy the constraints
+  d ≥ 0
+  c ≥ 0
+  c - d ≥ 1
+where
+ c := ↑b * ↑a
+ d := ↑a * ↑b
+-- ANCHOR_END: omega_mul
+-- ANCHOR: simp_mul
+error: `simp` made no progress
+-- ANCHOR_END: simp_mul

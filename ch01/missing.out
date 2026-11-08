@@ -1,0 +1,7 @@
+-- ANCHOR: missing
+error: Missing cases:
+algae
+fly
+snail
+heron
+-- ANCHOR_END: missing

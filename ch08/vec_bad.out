@@ -1,0 +1,28 @@
+-- ANCHOR: short
+error: Application type mismatch: The argument
+  cons fly nil
+has type
+  Vec Critter (0 + 1)
+but is expected to have type
+  Vec Critter 0
+in the application
+  cons frog (cons fly nil)
+-- ANCHOR_END: short
+-- ANCHOR: headNil
+error: Application type mismatch: The argument
+  nil
+has type
+  Vec Critter 0
+but is expected to have type
+  Vec ?m.2 (?m.3 + 1)
+in the application
+  head nil
+-- ANCHOR_END: headNil
+-- ANCHOR: nilCase
+error: Type mismatch
+  nil
+has type
+  Vec ?m.9 0
+but is expected to have type
+  Vec Critter (n + 1)
+-- ANCHOR_END: nilCase

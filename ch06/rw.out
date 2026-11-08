@@ -1,0 +1,32 @@
+-- ANCHOR: frog_before
+c : Critter
+h : c = frog
+⊢ Eats c fly
+-- ANCHOR_END: frog_before
+-- ANCHOR: frog_after
+c : Critter
+h : c = frog
+⊢ Eats frog fly
+-- ANCHOR_END: frog_after
+-- ANCHOR: back_after
+c : Critter
+h : frog = c
+⊢ Eats frog fly
+-- ANCHOR_END: back_after
+-- ANCHOR: nums_mid
+a b c : Nat
+h1 : a = b
+h2 : b = c
+⊢ b = c
+-- ANCHOR_END: nums_mid
+-- ANCHOR: legs_after
+c : Critter
+h : c = frog
+⊢ legs frog = 4
+-- ANCHOR_END: legs_after
+-- ANCHOR: at_after
+c : Critter
+h1 : c = heron
+h2 : Eats heron frog
+⊢ Eats heron frog
+-- ANCHOR_END: at_after

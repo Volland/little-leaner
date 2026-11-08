@@ -1,0 +1,27 @@
+-- ANCHOR: ctor
+error: Tactic `constructor` failed: no applicable constructor found
+
+⊢ Eats fly frog
+-- ANCHOR_END: ctor
+-- ANCHOR: exact
+error: Type mismatch
+  Eats.frog_fly
+has type
+  Eats frog fly
+but is expected to have type
+  Eats fly frog
+-- ANCHOR_END: exact
+-- ANCHOR: false
+error: Tactic `constructor` failed: no applicable constructor found
+
+⊢ False
+-- ANCHOR_END: false
+-- ANCHOR: critter
+error: Type mismatch
+  frog
+has type
+  Critter
+of sort `Type` but is expected to have type
+  Eats frog fly
+of sort `Prop`
+-- ANCHOR_END: critter

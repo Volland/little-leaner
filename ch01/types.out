@@ -1,0 +1,18 @@
+-- ANCHOR: frog
+Critter.frog : Critter
+-- ANCHOR_END: frog
+-- ANCHOR: critter
+Critter : Type
+-- ANCHOR_END: critter
+-- ANCHOR: others
+3 : Nat
+"frog" : String
+Bool.true : Bool
+-- ANCHOR_END: others
+-- ANCHOR: all
+Critter.all : List Critter
+8
+-- ANCHOR_END: all
+-- ANCHOR: type
+Type : Type 1
+-- ANCHOR_END: type

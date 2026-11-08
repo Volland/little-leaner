@@ -1,0 +1,5 @@
+-- ANCHOR: fly
+error: Tactic `constructor` failed: no applicable constructor found
+
+⊢ Swims fly
+-- ANCHOR_END: fly

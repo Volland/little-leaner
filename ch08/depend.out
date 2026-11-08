@@ -1,0 +1,25 @@
+-- ANCHOR: evalRep
+[Critter.snail, Critter.snail, Critter.snail]
+-- ANCHOR_END: evalRep
+-- ANCHOR: checkRep
+replicate 3 snail : Vec Critter 3
+replicate 5 snail : Vec Critter 5
+-- ANCHOR_END: checkRep
+-- ANCHOR: checkAt
+@replicate : {α : Type} → (n : Nat) → α → Vec α n
+-- ANCHOR_END: checkAt
+-- ANCHOR: piType
+(n : Nat) → Vec Critter n : Type
+-- ANCHOR_END: piType
+-- ANCHOR: arrow
+Nat → Vec Critter 3 : Type
+-- ANCHOR_END: arrow
+-- ANCHOR: forall
+∀ (n : Nat), n + 0 = n : Prop
+-- ANCHOR_END: forall
+-- ANCHOR: addZero
+add_zero' 5 : 5 + 0 = 5
+-- ANCHOR_END: addZero
+-- ANCHOR: noHeron
+∀ (c : Critter), ¬Eats c heron : Prop
+-- ANCHOR_END: noHeron

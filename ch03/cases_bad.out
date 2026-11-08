@@ -1,0 +1,6 @@
+-- ANCHOR: otter
+error: Tactic `constructor` failed: no applicable constructor found
+
+case otter_fish
+⊢ Flies otter
+-- ANCHOR_END: otter

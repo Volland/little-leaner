@@ -1,0 +1,23 @@
+-- ANCHOR: all_not_1
+c : Critter
+h : Eats c c
+⊢ False
+-- ANCHOR_END: all_not_1
+-- ANCHOR: not_ex_1
+h : ∃ c, Eats c c
+⊢ False
+-- ANCHOR_END: not_ex_1
+-- ANCHOR: not_ex_2
+c : Critter
+e : Eats c c
+⊢ False
+-- ANCHOR_END: not_ex_2
+-- ANCHOR: heron
+not_ex heron heron_safe : ¬∃ c, Eats c heron
+-- ANCHOR_END: heron
+-- ANCHOR: snail_1
+⊢ ¬Swims snail
+-- ANCHOR_END: snail_1
+-- ANCHOR: axioms
+'no_cannibals' does not depend on any axioms
+-- ANCHOR_END: axioms

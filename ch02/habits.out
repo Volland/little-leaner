@@ -1,0 +1,19 @@
+-- ANCHOR: Swims
+Swims : Critter → Prop
+-- ANCHOR_END: Swims
+-- ANCHOR: frog
+Swims.frog : Swims frog
+-- ANCHOR_END: frog
+-- ANCHOR: print
+theorem duck_flies : Flies duck :=
+Flies.duck
+-- ANCHOR_END: print
+-- ANCHOR: fly
+Swims fly : Prop
+-- ANCHOR_END: fly
+-- ANCHOR: plant
+inductive Plant : Critter → Prop
+number of parameters: 0
+constructors:
+Plant.algae : Plant algae
+-- ANCHOR_END: plant

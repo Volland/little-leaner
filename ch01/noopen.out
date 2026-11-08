@@ -1,0 +1,6 @@
+-- ANCHOR: short
+error: Unknown identifier `frog`
+-- ANCHOR_END: short
+-- ANCHOR: long
+Critter.frog : Critter
+-- ANCHOR_END: long

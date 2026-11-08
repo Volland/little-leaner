@@ -1,0 +1,3 @@
+-- ANCHOR: ex1
+⊢ Flies fly ∧ Eats fly algae
+-- ANCHOR_END: ex1

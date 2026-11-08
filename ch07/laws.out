@@ -1,0 +1,73 @@
+-- ANCHOR: len_nil
+case nil
+ys : List Critter
+⊢ len (app [] ys) = len [] + len ys
+-- ANCHOR_END: len_nil
+-- ANCHOR: len_nil2
+case nil
+ys : List Critter
+⊢ len ys = 0 + len ys
+-- ANCHOR_END: len_nil2
+-- ANCHOR: len_cons
+case cons
+ys : List Critter
+x : Critter
+xs : List Critter
+ih : len (app xs ys) = len xs + len ys
+⊢ len (app (x :: xs) ys) = len (x :: xs) + len ys
+-- ANCHOR_END: len_cons
+-- ANCHOR: len_cons2
+case cons
+ys : List Critter
+x : Critter
+xs : List Critter
+ih : len (app xs ys) = len xs + len ys
+⊢ len (app xs ys) + 1 = len xs + 1 + len ys
+-- ANCHOR_END: len_cons2
+-- ANCHOR: len_cons3
+case cons
+ys : List Critter
+x : Critter
+xs : List Critter
+ih : len (app xs ys) = len xs + len ys
+⊢ len xs + len ys + 1 = len xs + 1 + len ys
+-- ANCHOR_END: len_cons3
+-- ANCHOR: guess
+[Critter.fly, Critter.frog, Critter.heron]
+[Critter.fly, Critter.frog, Critter.heron]
+-- ANCHOR_END: guess
+-- ANCHOR: app_nil_cons
+case cons
+x : Critter
+xs : List Critter
+ih : app xs [] = xs
+⊢ app (x :: xs) [] = x :: xs
+-- ANCHOR_END: app_nil_cons
+-- ANCHOR: assoc_cons
+case cons
+ys zs : List Critter
+x : Critter
+xs : List Critter
+ih : app (app xs ys) zs = app xs (app ys zs)
+⊢ x :: app (app xs ys) zs = x :: app xs (app ys zs)
+-- ANCHOR_END: assoc_cons
+-- ANCHOR: rev_app_nil
+case nil
+ys : List Critter
+⊢ rev ys = app (rev ys) []
+-- ANCHOR_END: rev_app_nil
+-- ANCHOR: rev_app_cons
+case cons
+ys : List Critter
+x : Critter
+xs : List Critter
+ih : rev (app xs ys) = app (rev ys) (rev xs)
+⊢ app (app (rev ys) (rev xs)) [x] = app (rev ys) (app (rev xs) [x])
+-- ANCHOR_END: rev_app_cons
+-- ANCHOR: rev_rev_cons
+case cons
+x : Critter
+xs : List Critter
+ih : rev (rev xs) = xs
+⊢ app (rev [x]) xs = x :: xs
+-- ANCHOR_END: rev_rev_cons

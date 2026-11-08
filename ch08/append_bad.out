@@ -1,0 +1,28 @@
+-- ANCHOR: wrongNil
+error: Type mismatch
+  ys
+has type
+  Vec α m
+but is expected to have type
+  Vec α (0 + m)
+-- ANCHOR_END: wrongNil
+-- ANCHOR: wrongCons
+error: Type mismatch
+  cons x (app xs ys)
+has type
+  Vec α (n✝ + m + 1)
+but is expected to have type
+  Vec α (n✝ + 1 + m)
+-- ANCHOR_END: wrongCons
+-- ANCHOR: stuckRw
+error: Tactic `rewrite` failed: Did not find an occurrence of the pattern
+  toList (append ?xs ?ys)
+in the target expression
+  toList (⋯ ▸ append xs ys) = toList xs ++ toList ys
+
+α : Type
+n m : Nat
+xs : Vec α n
+ys : Vec α m
+⊢ toList (⋯ ▸ append xs ys) = toList xs ++ toList ys
+-- ANCHOR_END: stuckRw

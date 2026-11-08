@@ -1,0 +1,6 @@
+name = "little-leaner"
+defaultTargets = ["Pond"]
+
+[[lean_lib]]
+name = "Pond"
+srcDir = "lib"

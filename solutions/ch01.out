@@ -1,0 +1,11 @@
+-- ANCHOR: ex1
+[Critter.fly, Critter.heron, Critter.duck]
+-- ANCHOR_END: ex1
+-- ANCHOR: ex2
+true
+eatenBy fly : Critter → Bool
+[Critter.frog, Critter.fish]
+-- ANCHOR_END: ex2
+-- ANCHOR: ex3
+[Critter.heron, Critter.duck, Critter.otter]
+-- ANCHOR_END: ex3

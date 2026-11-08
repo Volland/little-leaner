@@ -1,0 +1,22 @@
+-- ANCHOR: check
+∀ (c : Critter), ¬Eats c heron : Prop
+-- ANCHOR_END: check
+-- ANCHOR: heron_safe_1
+c : Critter
+⊢ ¬Eats c heron
+-- ANCHOR_END: heron_safe_1
+-- ANCHOR: heron_safe_2
+c : Critter
+h : Eats c heron
+⊢ False
+-- ANCHOR_END: heron_safe_2
+-- ANCHOR: type
+heron_safe (c : Critter) : ¬Eats c heron
+-- ANCHOR_END: type
+-- ANCHOR: use
+heron_safe otter : ¬Eats otter heron
+-- ANCHOR_END: use
+-- ANCHOR: not_all_1
+h : ∀ (c : Critter), Swims c
+⊢ False
+-- ANCHOR_END: not_all_1

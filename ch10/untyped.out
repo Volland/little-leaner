@@ -1,0 +1,15 @@
+-- ANCHOR: good
+some (Val.nat 5)
+-- ANCHOR_END: good
+-- ANCHOR: bad
+none
+-- ANCHOR_END: bad
+-- ANCHOR: badif
+none
+-- ANCHOR_END: badif
+-- ANCHOR: lucky
+some (Val.nat 1)
+-- ANCHOR_END: lucky
+-- ANCHOR: unlucky
+some (Val.bool false)
+-- ANCHOR_END: unlucky

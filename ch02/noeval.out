@@ -1,0 +1,6 @@
+-- ANCHOR: eval
+error: failed to synthesize
+  Decidable (Eats frog fly)
+
+Hint: Additional diagnostic information may be available using the `set_option diagnostics true` command.
+-- ANCHOR_END: eval
