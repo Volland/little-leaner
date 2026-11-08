@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="260" viewBox="0 0 600 260"
+     font-family="'Source Sans 3'" font-size="16">
+  <title>A goal, a tactic, and no goals left</title>
+  <defs>
+    <marker id="arr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#000000"/>
+    </marker>
+  </defs>
+
+  <g font-weight="bold" text-anchor="middle">
+    <text x="105" y="36">goal before</text>
+    <text x="315" y="36">tactic</text>
+    <text x="510" y="36">goal after</text>
+  </g>
+
+  <!-- row 1 -->
+  <rect x="15" y="50" width="180" height="60" rx="4" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="105" y="86" text-anchor="middle" font-family="'JuliaMono'">⊢ Eats frog fly</text>
+  <rect x="220" y="50" width="190" height="60" rx="30" fill="#FFFFFF" stroke="#E8480A" stroke-width="2.5"/>
+  <text x="315" y="85" text-anchor="middle" font-family="'JuliaMono'" font-size="15">exact Eats.frog_fly</text>
+  <rect x="435" y="50" width="150" height="60" rx="4" fill="#FFFFFF" stroke="#4D4D4D" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="510" y="86" text-anchor="middle" fill="#4D4D4D">no goals</text>
+
+  <!-- row 2 -->
+  <rect x="15" y="140" width="180" height="60" rx="4" fill="#FFFFFF" stroke="#000000" stroke-width="1.5"/>
+  <text x="105" y="176" text-anchor="middle" font-family="'JuliaMono'">⊢ Eats heron fish</text>
+  <rect x="220" y="140" width="190" height="60" rx="30" fill="#FFFFFF" stroke="#E8480A" stroke-width="2.5"/>
+  <text x="315" y="175" text-anchor="middle" font-family="'JuliaMono'" font-size="15">constructor</text>
+  <rect x="435" y="140" width="150" height="60" rx="4" fill="#FFFFFF" stroke="#4D4D4D" stroke-width="1.5" stroke-dasharray="5 3"/>
+  <text x="510" y="176" text-anchor="middle" fill="#4D4D4D">no goals</text>
+
+  <g stroke="#000000" stroke-width="1.5" marker-end="url(#arr)">
+    <line x1="195" y1="80" x2="218" y2="80"/>
+    <line x1="410" y1="80" x2="433" y2="80"/>
+    <line x1="195" y1="170" x2="218" y2="170"/>
+    <line x1="410" y1="170" x2="433" y2="170"/>
+  </g>
+
+  <text x="300" y="242" text-anchor="middle" font-size="15" fill="#4D4D4D">Each tactic supplies a thing whose type is the goal. Then nothing is missing.</text>
+</svg>

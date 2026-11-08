@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Little Leaner</title>
+<meta name="description" content="A small book about a big idea: a type can say what a program promises, and a proof is a program that keeps the promise.">
+<meta property="og:title" content="The Little Leaner: Dependent Types and Proofs in Lean 4, One Question at a Time">
+<meta property="og:description" content="A small book about a big idea: a type can say what a program promises, and a proof is a program that keeps the promise.">
+<meta property="og:url" content="https://volland.github.io/little-leaner/">
+<meta property="og:image" content="https://volland.github.io/little-leaner/assets/cover-720.jpg?v=de8498f300">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#E8480A">
+<link rel="icon" href="assets/icon.svg?v=85ee9b050c" type="image/svg+xml">
+<link rel="preload" href="fonts/LibertinusSerif-Regular.woff2?v=f799258a57" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/style.css?v=e57e157892">
+</head>
+<body>
+<header class="top"><div class="wrap">
+<a class="brand" href="./">Little <span>Leaner</span></a>
+<nav><a href="#get">Get it</a><a href="#road">The road</a><a href="#sample">Sample</a><a href="#contents">Contents</a><a href="#maxims">Maxims</a><a href="#code">Code</a></nav>
+</div></header>
+<main>
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <p class="kicker">A little book of dependent types</p>
+    <h1><span class="the">The</span> <span class="little">Little</span> <span class="leaner">Leaner</span></h1>
+    <p class="sub">Dependent Types and Proofs in Lean 4, One Question at a Time</p>
+    <p class="by">Volodymyr Pavlyshyn</p>
+    <p class="lead">This book keeps the reasons. It uses Lean 4, a programming language in which a claim such as "the frog eats flies" is a <em>type</em>, and a reason for the claim, a proof, is a <em>thing of that type</em>. Lean checks proofs the way it checks programs: before anything runs, and without trusting anyone. If Lean accepts a proof, the claim holds.</p>
+    <div class="btns">
+      <a class="btn" href="https://leanpub.com/littleleaner">Buy on Leanpub</a>
+      <a class="btn alt" href="#sample">Read a sample</a>
+    </div>
+  </div>
+  <a class="cover" href="https://leanpub.com/littleleaner"><img src="assets/cover-360.jpg?v=da4eb535ed"
+    srcset="assets/cover-360.jpg?v=da4eb535ed 360w, assets/cover-720.jpg?v=de8498f300 720w" sizes="(max-width: 760px) 280px, 360px"
+    width="360" height="540" alt="The cover of The Little Leaner: an engraved scene of a young scholar and a small robot reading under a blossoming tree, among scrolls of logic and a ∀ sign."></a>
+</section>
+
+<section class="about wrap narrow">
+<p>A small book about a big idea: a type can say what a program promises, and a proof is a program that keeps the promise.</p>
+<p><em>The Little Leaner</em> teaches dependent types and proofs in Lean 4, one question and one answer at a time, in the style of <em>The Little Schemer</em>. Cover the right-hand column, read the question, answer it, then look.</p>
+<p>Start with a pond and the types of its critters. Prove who eats whom. Climb through and, or, not, for every and there is; numbers, equality and induction; lists, and vectors whose types know their length. Finish with a little language whose programs cannot go wrong, and a compiler to a stack machine that is proved to keep their meaning.</p>
+<ul><li>ten short chapters, about 750 questions, twelve Maxims</li><li>39 graded exercises with room to write, and Notes pages to draw on</li><li>every program, output, and proof goal checked by Lean 4.35.0</li><li>no logic course, no mathematics, no Mathlib assumed</li></ul>
+<p>The sequel to <em>The Little Elpier</em>, which is not required.</p>
+<p>10 chapters, 760 questions, 12 Maxims, and graded exercises at the end
+of every chapter, each with a solution that Lean checks.</p>
+</section>
+
+<section id="road" class="gate wrap narrow">
+  <h2>From a pond to a proved compiler</h2>
+  <p>The book starts with eight critters in a pond and a table of who eats whom. It ends
+  with a little programming language whose bad programs cannot be written, and a compiler
+  for it that Lean has checked keeps the meaning of every program. Each step uses the one
+  before:</p>
+  <ul class="gate-list">
+    <li><strong>Claims are types</strong> <span class="meta">Chapters 1–2</span><br>"The frog
+    eats flies" becomes a type, and a proof is a thing of that type, checked like any program.</li>
+    <li><strong>Logic, built from constructors</strong> <span class="meta">Chapters 3–4</span><br>And,
+    or, if, not, for every, and there is: each one a type, with rules for proving and using it.</li>
+    <li><strong>Induction and equality</strong> <span class="meta">Chapters 5–7</span><br>Proofs about
+    numbers and lists that follow the recursion, and what <code>=</code> really means.</li>
+    <li><strong>Types that mention values</strong> <span class="meta">Chapters 8–9</span><br>Vectors
+    that know their length, evidence you can carry, and questions Lean decides for us.</li>
+    <li><strong>A language that cannot go wrong</strong> <span class="meta">Chapter 10</span><br>A typed
+    expression language, a stack machine whose stack cannot run dry, and a correctness proof.</li>
+  </ul>
+  <p>No logic course and no mathematics are assumed, only some programming. Every program,
+  output and proof goal printed in the book is checked by Lean 4, so the book cannot
+  quietly drift from what Lean says.</p>
+</section>
+
+<section id="get" class="buy wrap narrow">
+  <h2>Get the book</h2>
+  <p><em>The Little Leaner</em> is on Leanpub as a PDF and an EPUB. Buy it once, and every future
+  update is yours too. A book like this takes months to write; buying it pays for the
+  work, and for the next book.</p>
+  <div class="ways">
+    <div class="way support">
+      <h3>Leanpub</h3>
+      <p>PDF and EPUB, with every future update free. Leanpub also has a free sample.</p>
+      <div class="btns">
+        <a class="btn" href="https://leanpub.com/littleleaner">Buy on Leanpub</a>
+      </div>
+    </div>
+    <div class="way free">
+      <h3>Try it first</h3>
+      <p>Read two sections of Chapter&nbsp;2 below, and run every program in the book from
+      the free <a href="https://github.com/Volland/little-leaner">companion code</a>.</p>
+      <div class="btns">
+        <a class="btn alt" href="#sample">Read the sample</a>
+        <a class="btn alt" href="#code">Get the code</a>
+      </div>
+    </div>
+  </div>
+  <p class="cite"><span class="meta">Cite it as</span><br>Pavlyshyn, V. (2026).
+  <em>The Little Leaner: Dependent Types and Proofs in Lean 4, One Question at a Time</em>. <a href="https://volland.github.io/little-leaner/">https://volland.github.io/little-leaner/</a></p>
+</section>
+
+<section id="sample" class="sample wrap narrow">
+  <h2>Read it the way the book reads</h2>
+  <p>Each page is two columns: a question on the left, its answer on the right. Cover the
+  answers, try each question, then look. Here are two sections of Chapter&nbsp;2, where the
+  first proofs appear.</p>
+  <button class="btn alt cover-toggle" type="button" aria-pressed="false">Cover the answers</button>
+  <div class="frames">
+<h3>The First Theorem</h3>
+<div class="frame"><div class="q"><p>How do we tell Lean that the frog eats flies, and keep the proof?</p></div><div class="a"><p>We write a <em>theorem</em>:</p>
+<pre class="lang-lean"><code><span class="kw">theorem</span> frog_eats_fly : Eats frog fly <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">exact</span> Eats.frog_fly</code></pre>
+<p>Lean accepts it and prints nothing.</p></div></div>
+<div class="frame"><div class="q"><p>How do we read it?</p></div><div class="a"><p><code>theorem</code> gives the proof a name, <code>frog_eats_fly</code>. After the colon comes the claim. After <code>:=</code> comes the proof.</p></div></div>
+<div class="frame"><div class="q"><p>And <code>by</code>?</p></div><div class="a"><p><code>by</code> starts a list of <em>tactics</em>. A tactic is a small step that builds part of a proof for us. This proof has one step.</p></div></div>
+<div class="frame"><div class="q"><p>What is the goal before the first tactic?</p></div><div class="a"><pre class="lang-text"><code>⊢ Eats frog fly</code></pre>
+<p>A <em>goal</em> is what is still missing. Read <code>⊢</code> as "show that". We must show that the frog eats flies.</p></div></div>
+<div class="frame"><div class="q"><p>Where does that goal come from?</p></div><div class="a"><p>From the claim after the colon. Before any tactic runs, the whole claim is missing.</p></div></div>
+<div class="frame"><div class="q"><p>What does <code>exact Eats.frog_fly</code> do?</p></div><div class="a"><p>It hands Lean a thing and says "this has exactly the type of the goal". Lean checks that it does. <code>Eats.frog_fly</code> has type <code>Eats frog fly</code>, which is the goal.</p></div></div>
+<div class="frame"><div class="q"><p>What is the goal now?</p></div><div class="a"><p>There is none. The proof is complete, and Lean says nothing.</p></div></div>
+<div class="frame"><div class="q"><p>How can we be sure nothing is left?</p></div><div class="a"><p>Ask for one more step:</p>
+<pre class="lang-lean"><code><span class="kw">example</span> : Eats frog fly <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">exact</span> Eats.frog_fly
+  <span class="var">exact</span> Eats.frog_fly</code></pre>
+<pre class="lang-text"><code>error: No goals to be solved</code></pre>
+<p>The second <code>exact</code> has nothing to do.</p></div></div>
+<div class="frame"><div class="q"><p>What is <code>example</code>?</p></div><div class="a"><p>A theorem with no name. Lean checks it and then forgets it. We use <code>example</code> when we only want to see that something checks.</p></div></div>
+<div class="frame"><div class="q"><p>Could we have named the theorem something else?</p></div><div class="a"><p>Yes. The name is ours to choose. Lean checks only the claim and the proof.</p></div></div>
+<div class="frame"><div class="q"><p>What happens if we hand <code>exact</code> a critter?</p></div><div class="a"><pre class="lang-lean"><code><span class="kw">example</span> : Eats frog fly <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">exact</span> frog</code></pre>
+<pre class="lang-text"><code>error: Type mismatch
+  frog
+has type
+  Critter
+of sort `Type` but is expected to have type
+  Eats frog fly
+of sort `Prop`</code></pre>
+<p><code>frog</code> is a thing, but a thing of the wrong type. It is a critter, not a proof that the frog eats flies.</p></div></div>
+<div class="frame"><div class="q"><p>What is a <em>sort</em>?</p></div><div class="a"><p>Lean's word for the type of a type. <code>Critter</code> lives in <code>Type</code>, the sort of data. <code>Eats frog fly</code> lives in <code>Prop</code>, the sort of claims.</p></div></div>
+<div class="frame"><div class="q"><p>What is the type of <code>frog_eats_fly</code>?</p></div><div class="a"><pre class="lang-text"><code>frog_eats_fly : Eats frog fly</code></pre>
+<p>The same as the type of <code>Eats.frog_fly</code>. A theorem is a name for a proof.</p></div></div>
+<div class="frame"><div class="q"><p>Can we use that name in another proof?</p></div><div class="a"><p>Yes, anywhere a proof of <code>Eats frog fly</code> is wanted:</p>
+<pre class="lang-lean"><code><span class="kw">example</span> : Eats frog fly <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">exact</span> frog_eats_fly</code></pre></div></div>
+<div class="frame"><div class="q"><p>Must we always write <code>Eats.</code> before the constructor?</p></div><div class="a"><p>No. Lean knows the goal is an <code>Eats</code> claim, so a leading dot looks the name up inside <code>Eats</code>:</p>
+<pre class="lang-lean"><code><span class="kw">example</span> : Eats heron fish <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">exact</span> .heron_fish</code></pre></div></div>
+<div class="frame"><div class="q"><p>What if we do not remember the name of the constructor at all?</p></div><div class="a"><p>Let Lean find it:</p>
+<pre class="lang-lean"><code><span class="kw">theorem</span> heron_eats_fish :
+    Eats heron fish <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">constructor</span></code></pre></div></div>
+<div class="frame"><div class="q"><p>What is the goal before <code>constructor</code>?</p></div><div class="a"><pre class="lang-text"><code>⊢ Eats heron fish</code></pre></div></div>
+<div class="frame"><div class="q"><p>What does <code>constructor</code> do with it?</p></div><div class="a"><p>It tries the constructors of <code>Eats</code>, one by one, until it finds one whose type matches the goal. Here that is <code>heron_fish</code>. The goal is then met, so no goals are left.</p></div></div>
+<div class="prose"><figure><img src="diagrams/ch02-goal-box.svg?v=b84540c56e" alt="Two proofs, one per row: each starts from a goal, one tactic supplies a thing of that type, and no goals are left." loading="lazy"><figcaption>Two proofs, one per row: each starts from a goal, one tactic supplies a thing of that type, and no goals are left.</figcaption></figure></div>
+<aside class="maxim"><p><strong>The Third Maxim</strong></p>
+<p>A tactic builds a proof. The goal says what is still missing.</p></aside>
+<h3>A Claim With No Proof</h3>
+<div class="frame"><div class="q"><p>Can <code>constructor</code> prove <code>Eats fly frog</code>?</p></div><div class="a"><pre class="lang-lean"><code><span class="kw">example</span> : Eats fly frog <span class="op">:=</span> <span class="kw">by</span>
+  <span class="var">constructor</span></code></pre>
+<pre class="lang-text"><code>error: Tactic `constructor` failed: no
+  applicable constructor found
+
+⊢ Eats fly frog</code></pre>
+<p>No. Lean also shows the goal it could not meet.</p></div></div>
+<div class="frame"><div class="q"><p>Why did it fail?</p></div><div class="a"><p>None of the eleven constructors has the type <code>Eats fly frog</code>. The closest one, <code>frog_fly</code>, has the critters the other way round.</p></div></div>
+<div class="frame"><div class="q"><p>What if we hand Lean that one anyway?</p></div><div class="a"><pre class="lang-text"><code>error: Type mismatch
+  Eats.frog_fly
+has type
+  Eats frog fly
+but is expected to have type
+  Eats fly frog</code></pre>
+<p>The same kind of error as <code>&quot;frog&quot;</code> in place of a critter. A proof of the wrong claim is a thing of the wrong type.</p></div></div>
+<aside class="aside"><p><strong>Watch out: the eater comes first</strong></p>
+<p><code>Eats frog fly</code> says the frog eats the fly. <code>Eats fly frog</code> says the fly eats the frog. Lean will not swap them for you, and the error says only that the types differ. When a proof of an <code>Eats</code> claim fails, read the order first.</p></aside>
+<div class="frame"><div class="q"><p>So is <code>Eats fly frog</code> false?</p></div><div class="a"><p>We believe so. But Lean has not said so. A tactic failed, and that is all.</p></div></div>
+<div class="frame"><div class="q"><p>What is the difference?</p></div><div class="a"><p>"Not proved" means no one has found a proof. "False" would need a proof that no proof can exist. Chapter 4 learns to write that.</p></div></div>
+<div class="frame"><div class="q"><p>Did Chapter 1's <code>decide</code> not say "is false"?</p></div><div class="a"><p>It did, about <code>eats fly frog = true</code>. <code>decide</code> could compute the Boolean <code>false</code> and see it is not <code>true</code>. With <code>Eats</code> there is no Boolean to compute, only constructors to look for.</p></div></div>
+  </div>
+</section>
+
+<section id="contents" class="contents wrap narrow">
+  <h2>Contents</h2>
+  <p class="meta">Preface · Before You Begin</p>
+  <ol class="chapters"><li><span class="num">1</span><div><h3>Things and Their Types</h3><p>The pond is back. Algae grow in it. Snails and flies eat the algae. Frogs and fish eat the snails and the flies, a duck eats whatever it can reach, and a heron and an otter stand at the top and eat the frogs and the fish.</p><p class="meta">59 questions · the First Maxim</p></div></li><li><span class="num">2</span><div><h3>Propositions Are Types</h3><p>At the end of Chapter 1, Lean agreed that <code>eats frog fly</code> is <code>true</code>. It worked the answer out from a table we wrote. If we had made a mistake in the table, it would have agreed with the mistake as calmly.</p><p class="meta">65 questions · the Second Maxim and the Third Maxim</p></div></li><li><span class="num">3</span><div><h3>Rules as Constructors</h3><p>Is the heron above the algae? Look at the food web and you will say yes at once. The heron eats the frog, the frog eats the fly, and the fly eats the algae. But Lean knows only <code>Eats</code>, and no constructor of <code>Eats</code> says <code>Eats heron algae</code>. In Chapter 2, a claim with no constructor behind it could not be proved.</p><p class="meta">77 questions · the Fourth Maxim and the Fifth Maxim</p></div></li><li><span class="num">4</span><div><h3>Nothing and Something</h3><p>In Chapter 2 we tried to prove that the fly eats the frog. No constructor of <code>Eats</code> fit, and Lean refused every attempt. But a claim we cannot prove is not yet a claim we have shown to be false. Maybe we did not try hard enough.</p><p class="meta">79 questions · the Sixth Maxim and the Seventh Maxim</p></div></li><li><span class="num">5</span><div><h3>Numbers by Hand</h3><p>The heron stands at the top of the pond. Chapter 3 proved that it is above the algae. It did not say how far above. How many steps is it from the heron down to the algae?</p><p class="meta">75 questions · the Eighth Maxim</p></div></li><li><span class="num">6</span><div><h3>Equality</h3><p>Every chapter so far has used <code>=</code>. Chapter 1 checked that <code>eats frog fly = true</code>, and Chapter 5 proved <code>0 + n = n</code> by induction. We never asked what <code>=</code> itself is, or where its proofs come from.</p><p class="meta">70 questions · the Ninth Maxim</p></div></li><li><span class="num">7</span><div><h3>Lists and Their Laws</h3><p>The heron eats a frog, the frog eats a fly, and the fly eats algae. Write them in a row and you have a food chain: <code>[heron, frog, fly, algae]</code>. A row of critters is a list.</p><p class="meta">79 questions</p></div></li><li><span class="num">8</span><div><h3>Types That Depend on Values</h3><p>Ask a list of critters for its first critter, and most of the time there is one. But a list can be empty. Ask with <code>head?</code>, and Lean's lists answer with a shrug that every caller must check, even a caller who knows the list is not empty.</p><p class="meta">84 questions · the Tenth Maxim</p></div></li><li><span class="num">9</span><div><h3>Families of Evidence</h3><p>In Chapter 1, <code>by decide</code> checked that <code>eats frog fly = true</code>. Lean computed the Boolean, found <code>true</code>, and agreed. In Chapter 2 we traded the Boolean for something better: a type, <code>Eats frog fly</code>, whose things are proofs.</p><p class="meta">84 questions · the Eleventh Maxim</p></div></li><li><span class="num">10</span><div><h3>A Language That Cannot Go Wrong</h3><p><em>The Little Elpier</em> ended with a type checker. It read a small expression such as <code>add tt (num 1)</code>, which asks us to add <em>true</em> to the number one, and said <code>Failure</code>. The bad expression was written first and turned away after. A type checker is a guard at the door.</p><p class="meta">88 questions · the Twelfth Maxim</p></div></li></ol>
+  <p class="meta">The Maxims · The Little Leaner's Card · Solutions · Where to Go Next</p>
+</section>
+
+<section id="maxims" class="maxims wrap">
+  <h2>The twelve Maxims</h2>
+  <p class="narrow">Short rules, each earned by the questions of one chapter.</p>
+  <ol><li><span class="label">The First Maxim</span><p>Every thing has a type. Ask <code>#check</code> before you guess.</p><span class="meta">Chapter 1</span></li><li><span class="label">The Second Maxim</span><p>A proposition is a type. A proof is a thing of that type.</p><span class="meta">Chapter 2</span></li><li><span class="label">The Third Maxim</span><p>A tactic builds a proof. The goal says what is still missing.</p><span class="meta">Chapter 2</span></li><li><span class="label">The Fourth Maxim</span><p>A rule is a constructor. To use it, <code>apply</code> it and prove what it asks for.</p><span class="meta">Chapter 3</span></li><li><span class="label">The Fifth Maxim</span><p>To prove "and", prove both. To use "or", handle both.</p><span class="meta">Chapter 3</span></li><li><span class="label">The Sixth Maxim</span><p>To prove "not P", assume P and reach <code>False</code>. From <code>False</code>, anything follows.</p><span class="meta">Chapter 4</span></li><li><span class="label">The Seventh Maxim</span><p>To prove "for every", take any one. To prove "there is", show one.</p><span class="meta">Chapter 4</span></li><li><span class="label">The Eighth Maxim</span><p>A proof about a recursive function follows the function: induction where it recurses.</p><span class="meta">Chapter 5</span></li><li><span class="label">The Ninth Maxim</span><p>Equal means the same after computing. When computing is not enough, rewrite.</p><span class="meta">Chapter 6</span></li><li><span class="label">The Tenth Maxim</span><p>A type may mention a value. Then checking the type checks the value.</p><span class="meta">Chapter 8</span></li><li><span class="label">The Eleventh Maxim</span><p>Evidence is data. What you can decide, let Lean decide.</p><span class="meta">Chapter 9</span></li><li><span class="label">The Twelfth Maxim</span><p>Make wrong programs impossible to write. Then prove the rest.</p><span class="meta">Chapter 10</span></li></ol>
+</section>
+
+<section id="code" class="code wrap narrow">
+  <h2>Get the code</h2>
+  <p>Every program in the book comes from the
+  <a href="https://github.com/Volland/little-leaner">companion repository</a>, and every output, error and goal printed
+  in the book is a golden file there that a test checks. It needs only core Lean 4.35.0: no
+  Mathlib and nothing else to download. It runs on macOS, Linux and Windows.</p>
+  <div class="setups">
+    <div><h3>On your machine</h3><p>Install <a href="https://lean-lang.org/">elan</a>, the Lean
+    installer. The first build fetches the right Lean.</p>
+<pre class="lang-bash"><code>git clone https://github.com/Volland/little-leaner
+cd little-leaner
+lake build
+lake env lean ch01/hello.lean
+python3 tests/run_lean.py</code></pre></div>
+    <div><h3>In an editor</h3><p>Open the folder in Visual Studio Code with the
+    <em>Lean 4</em> extension. The infoview shows the goal at the cursor, the same goals
+    the book prints.</p></div>
+    <div><h3>In the browser</h3><p>No install: paste <code>lib/Pond.lean</code> and a
+    chapter file into the <a href="https://live.lean-lang.org/">Lean web editor</a>. It runs the newest Lean,
+    so a message may read a little differently.</p></div>
+  </div>
+</section>
+
+</main>
+<footer><div class="wrap">
+<p>© 2026 Volodymyr Pavlyshyn. The <a href="https://github.com/Volland/little-leaner">companion code</a> is Apache-2.0.
+<a href="https://leanpub.com/littleleaner">Leanpub</a> · <a href="https://pavlyshyn.me/books">Other books</a></p>
+<p>Set in Ultra, Libertinus Serif, Source Sans 3 and JuliaMono (open font licenses).
+<a href="https://pavlyshyn.me/impressum">Impressum</a> ·
+<a href="https://pavlyshyn.me/datenschutz">Datenschutz</a> ·
+<a href="https://pavlyshyn.me/agb">AGB</a></p>
+</div></footer>
+<script src="assets/site.js?v=79794abe5a"></script>
+</body>
+</html>
